@@ -136,6 +136,7 @@ def get_profile(profile_id: str):
             "country_id": profile.country_id,
             "country_probability": profile.country_probability,
             "created_at": profile.created_at
+	    
         }
     }
 
@@ -177,4 +178,23 @@ def get_all_profiles(gender: str = None, country_id: str = None, age_group: str 
         "status": "success",
         "count": len(result),
         "data": result
+    }
+@app.get("/")
+def root():
+    return {
+        "status": "success",
+        "message": "API is running"
+    }
+@app.get("/health")
+def health():
+    return {
+        "status": "success",
+        "message": "healthy"
+    }
+@app.get("/me")
+def me():
+    return {
+        "name": "kehlany",
+        "email": "kelanikhadijat41@gmail.com",
+        "github": "https://github.com/kehlany"
     }
