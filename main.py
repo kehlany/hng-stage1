@@ -194,7 +194,7 @@ def health():
 @app.get("/me")
 def me():
     return {
-        "name": "Kelani",
+        "name": "Kelani Khadijat",
         "email": "kelanikhadijat41@gmail.com",
         "github": "https://github.com/kehlany"
     }
